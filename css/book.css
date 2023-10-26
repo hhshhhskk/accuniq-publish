@@ -1,0 +1,95 @@
+.book {
+  position: relative;
+  padding-top: 30px;
+  background-color: firebrick;
+}
+
+.book-inner {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.book-header {
+  position: relative;
+}
+
+.book-title {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.book-txt {
+  position: relative;
+  display: block;
+  font-size: 1.8rem;
+  color: #a7a9a7;
+  text-align: center;
+}
+
+.book-main {
+  position: relative;
+  padding-top: 25px 0;
+}
+
+.book-category {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.book-list {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.book-list li {
+  position: relative;
+}
+
+.book-cate-bt {
+  position: relative;
+  display: block;
+  padding: 0px 20px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 44px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.book-cate-bt-active {
+  border: 1px solid transparent !important;
+  background-color: #333 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.book-slide {
+  position: relative;
+}
+
+.book-footer {
+  position: relative;
+  width: auto;
+  height: 5.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.book-footer button {
+  position: relative;
+  padding: 0 3.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  line-height: 5.6rem;
+  border-radius: 3.8rem;
+}

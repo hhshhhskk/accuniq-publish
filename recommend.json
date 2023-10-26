@@ -1,0 +1,47 @@
+{
+  "total": 11,
+  "recommend_1": {
+    "file": "images/recommend/recommend1.jpeg",
+    "url": "a.html"
+  },
+  "recommend_2": {
+    "file": "images/recommend/recommend2.jpeg",
+    "url": "b.html"
+  },
+  "recommend_3": {
+    "file": "images/recommend/recommend3.jpeg",
+    "url": "c.html"
+  },
+  "recommend_4": {
+    "file": "images/recommend/recommend4.jpeg",
+    "url": "d.html"
+  },
+  "recommend_5": {
+    "file": "images/recommend/recommend5.jpeg",
+    "url": "e.html"
+  },
+  "recommend_6": {
+    "file": "images/recommend/recommend6.jpeg",
+    "url": "f.html"
+  },
+  "recommend_7": {
+    "file": "images/recommend/recommend7.jpeg",
+    "url": "g.html"
+  },
+  "recommend_8": {
+    "file": "images/recommend/recommend8.jpeg",
+    "url": "h.html"
+  },
+  "recommend_9": {
+    "file": "images/recommend/recommend9.jpeg",
+    "url": "i.html"
+  },
+  "recommend_10": {
+    "file": "images/recommend/recommend10.jpeg",
+    "url": "j.html"
+  },
+  "recommend_11": {
+    "file": "images/recommend/recommend11.jpeg",
+    "url": "k.html"
+  }
+}

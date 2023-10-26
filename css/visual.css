@@ -18,6 +18,7 @@
 }
 
 .visual-slide {
+  position: relative;
 }
 
 .visual-slide-item {

@@ -1,0 +1,95 @@
+.tour {
+  position: relative;
+  padding-top: 30px;
+  background-color: yellowgreen;
+}
+
+.tour-inner {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.tour-header {
+  position: relative;
+}
+
+.tour-title {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.tour-txt {
+  position: relative;
+  display: block;
+  font-size: 1.8rem;
+  color: #a7a9a7;
+  text-align: center;
+}
+
+.tour-main {
+  position: relative;
+  padding-top: 25px 0;
+}
+
+.tour-category {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.tour-list {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.tour-list li {
+  position: relative;
+}
+
+.tour-cate-bt {
+  position: relative;
+  display: block;
+  padding: 0px 20px;
+  line-height: 44px;
+  border: 1px solid #e5e5e5;
+  font-size: 1.4rem;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.tour-cate-bt-active {
+  border: 1px solid transparent !important;
+  background-color: #333 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.tour-slide {
+  position: relative;
+}
+
+.tour-footer {
+  position: relative;
+  width: auto;
+  height: 5.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tour-footer button {
+  position: relative;
+  padding: 0 3.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  line-height: 5.6rem;
+  border-radius: 3.8rem;
+}

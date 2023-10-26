@@ -1,0 +1,44 @@
+.live {
+  position: relative;
+  padding-top: 30px;
+  background-color: violet;
+}
+
+.live-inner {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.live-header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.live-header img {
+  width: auto;
+  height: 4rem;
+}
+.live-main {
+  position: relative;
+}
+
+.live-footer {
+  position: relative;
+  width: auto;
+  height: 5.6rem;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto 0;
+}
+
+.live-footer button {
+  position: relative;
+  padding: 0 3.9rem;
+  font-size: 1.6rem;
+  line-height: 5.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3.8rem;
+}
