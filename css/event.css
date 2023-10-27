@@ -36,6 +36,23 @@
   padding-top: 25px 0;
 }
 
+.event-slide-wrap {
+  position: relative;
+  height: 350px;
+  margin-top: 23px;
+  background-color: palegreen;
+}
+
 .event-slide {
   position: relative;
+}
+
+.event-slide-item {
+  position: relative;
+}
+
+.event-slide-item a {
+  position: relative;
+  width: 100%;
+  display: block;
 }

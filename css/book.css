@@ -73,8 +73,25 @@
   font-weight: 700 !important;
 }
 
+.book-slide-wrap {
+  position: relative;
+  height: 400px;
+  margin-top: 23px;
+  background-color: slateblue;
+}
+
 .book-slide {
   position: relative;
+}
+
+.book-slide-item {
+  position: relative;
+}
+
+.book-slide-item a {
+  position: relative;
+  width: 100%;
+  display: block;
 }
 
 .book-footer {

@@ -16,7 +16,6 @@
 
 .tour-title {
   position: relative;
-  margin-bottom: 10px;
   font-size: 2.8rem;
   font-weight: 700;
   color: #000;
@@ -26,6 +25,7 @@
 .tour-txt {
   position: relative;
   display: block;
+  margin-bottom: 10px;
   font-size: 1.8rem;
   color: #a7a9a7;
   text-align: center;
@@ -57,24 +57,104 @@
   position: relative;
   display: block;
   padding: 0px 20px;
-  line-height: 44px;
   border: 1px solid #e5e5e5;
+  background-color: #fff;
   font-size: 1.4rem;
   font-weight: 400;
+  line-height: 44px;
   cursor: pointer;
   border-radius: 30px;
-  background-color: #fff;
 }
 
 .tour-cate-bt-active {
   border: 1px solid transparent !important;
   background-color: #333 !important;
-  color: #fff !important;
   font-weight: 700 !important;
+  color: #fff !important;
+}
+
+.tour-slide-wrap {
+  position: relative;
+  height: 355px;
+  margin-top: 23px;
 }
 
 .tour-slide {
   position: relative;
+}
+
+.tour-slide-item {
+  position: relative;
+}
+
+.tour-slide-item a {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.tour-slide-item a img {
+  width: 100%;
+  height: 245px;
+}
+
+.tour-slide-info {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  background-color: darkslategray;
+}
+
+.tour-slide-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+}
+
+.tour-slide-prev::before {
+  content: "";
+  position: relative;
+  width: 10px;
+  height: 18px;
+  display: block;
+  margin: 0 auto;
+  background: url("/images/slider_arrow.svg") no-repeat center;
+  /* rotate 돌리기 , deg -> "각도" */
+  transform: rotateY(180deg);
+}
+
+.tour-slide-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transform: translateX(50%) translateY(-50%);
+  border-radius: 50%;
+}
+
+.tour-slide-next::before {
+  content: "";
+  position: relative;
+  width: 10px;
+  height: 18px;
+  display: block;
+  margin: 0 auto;
+  background: url("/images/slider_arrow.svg") no-repeat center;
 }
 
 .tour-footer {
@@ -83,6 +163,7 @@
   height: 5.6rem;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .tour-footer button {

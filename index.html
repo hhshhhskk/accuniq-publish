@@ -104,8 +104,6 @@
               <span class="recommend-txt"
                 >할인이 쎄다! 지금, 특가 상품을 확인하세요.</span
               >
-            </div>
-            <div class="recommend-main">
               <div class="recommend-category">
                 <ul class="recommend-list">
                   <li>
@@ -127,16 +125,23 @@
                   </li>
                 </ul>
               </div>
-              <!-- Swiper 영역 -->
-              <div class="swiper recommend-slide">
-                <div class="swiper-wrapper"></div>
-              </div>
-              <!-- Swiper Pagination -->
-              <button class="recommend-slide-prev"></button>
-              <button class="recommend-slide-next"></button>
             </div>
+            <div class="recommend-main">
+              <!-- Swiper 영역 -->
+              <div class="recommend-slide-wrap">
+                <div class="swiper recommend-slide">
+                  <div class="swiper-wrapper"></div>
+                </div>
+                <!-- Swiper Pagination -->
+                <button class="recommend-slide-prev"></button>
+                <button class="recommend-slide-next"></button>
+              </div>
+            </div>
+
             <div class="recommend-footer">
-              <button>쇼핑 홈 바로가기 ></button>
+              <button>
+                쇼핑 홈 바로가기<span class="footer-bt-img"></span>
+              </button>
             </div>
           </div>
         </section>
@@ -167,7 +172,15 @@
                   </li>
                 </ul>
               </div>
-              <!-- 슬라이드 영역 -->
+              <!-- 투어 슬라이드 -->
+              <div class="tour-slide-wrap">
+                <div class="swiper tour-slide">
+                  <div class="swiper-wrapper"></div>
+                </div>
+                <!-- Swiper Pagination -->
+                <button class="tour-slide-prev"></button>
+                <button class="tour-slide-next"></button>
+              </div>
             </div>
             <!-- 투어 푸터 -->
             <div class="tour-footer">
@@ -214,7 +227,15 @@
                   </li>
                 </ul>
               </div>
-              <!-- 슬라이드 영역 -->
+              <!-- 티켓 슬라이드 -->
+              <div class="ticket-slide-wrap">
+                <div class="swiper ticket-slide">
+                  <div class="swiper-wrapper"></div>
+                </div>
+                <!-- Swiper Pagination -->
+                <button class="ticket-slide-prev"></button>
+                <button class="ticket-slide-next"></button>
+              </div>
             </div>
             <!-- 티켓랭킹 푸터 -->
             <div class="ticket-footer">
@@ -229,7 +250,17 @@
               <img src="/images/title_live.svg" alt="" />
             </div>
             <!-- 인터파크 메인 슬라이드  -->
-            <div class="live-main"></div>
+            <div class="live-main">
+              <!-- 라이브 슬라이드 -->
+              <div class="live-slide-wrap">
+                <div class="swiper live-slide">
+                  <div class="swiper-wrapper"></div>
+                </div>
+                <!-- Swiper Pagination -->
+                <button class="live-slide-prev"></button>
+                <button class="live-slide-next"></button>
+              </div>
+            </div>
             <!-- 인터파크 라이브 푸터 -->
             <div class="live-footer">
               <button>인터파크 라이브 바로가기 ></button>
@@ -262,7 +293,25 @@
                   </li>
                 </ul>
               </div>
-              <!-- 슬라이드 영역 -->
+              <!-- 도서 슬라이드 -->
+              <div class="book-slide-wrap">
+                <div class="swiper book-slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div>
+                    <div class="swiper-slide">Slide 11</div>
+                    <div class="swiper-slide">Slide 12</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="book-footer">
               <button>도서 홈 바로가기 ></button>
@@ -279,13 +328,33 @@
               >
             </div>
             <div class="event-main">
-              <!-- 슬라이드 영역 -->
+              <!-- 라이브 슬라이드 -->
+              <div class="event-slide-wrap">
+                <div class="swiper event-slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div>
+                    <div class="swiper-slide">Slide 11</div>
+                    <div class="swiper-slide">Slide 12</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
       <!-- 하단 영역 -->
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div>하단영역~~~~~</div>
+      </footer>
     </div>
   </body>
 </html>
@@ -295,5 +364,13 @@
 
 <!-- Initialize Swiper : 2. 기능을 사용함 -->
 <script src="/js/visual.js"></script>
-<!-- <script src="/js/recommend.js"></script> -->
-<script></script>
+<script src="/js/recommend.js"></script>
+<script src="/js/tour.js"></script>
+<script src="/js/ticket.js"></script>
+<script src="/js/live.js"></script>
+<script>
+  const bookSwiper = new Swiper(".book-slide", {});
+</script>
+<script>
+  const eventSwiper = new Swiper(".event-slide", {});
+</script>
