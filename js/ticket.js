@@ -6,7 +6,7 @@
 // - URL
 const ticket_xh = new XMLHttpRequest();
 
-ticket_xh.open("GET", "ticket.json");
+ticket_xh.open("GET", "/data/ticket.json");
 ticket_xh.send();
 ticket_xh.onreadystatechange = function (event) {
   //console.log(event.target);

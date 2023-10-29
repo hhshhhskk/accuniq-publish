@@ -6,7 +6,7 @@
 // - URL
 const live_xh = new XMLHttpRequest();
 
-live_xh.open("GET", "live.json");
+live_xh.open("GET", "/data/live.json");
 live_xh.send();
 live_xh.onreadystatechange = function (event) {
   //console.log(event.target);

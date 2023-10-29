@@ -6,7 +6,7 @@
 // - URL
 const xh = new XMLHttpRequest();
 
-xh.open("GET", "visual.json");
+xh.open("GET", "/data/visual.json");
 xh.send();
 xh.onreadystatechange = function (event) {
   //console.log(event.target);

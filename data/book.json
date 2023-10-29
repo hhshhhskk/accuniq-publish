@@ -1,0 +1,35 @@
+{
+  "total": 8,
+  "book_1": {
+    "file": "images/book/book1.jpg",
+    "url": "a.html"
+  },
+  "book_2": {
+    "file": "images/book/book2.jpg",
+    "url": "b.html"
+  },
+  "book_3": {
+    "file": "images/book/book3.png",
+    "url": "c.html"
+  },
+  "book_4": {
+    "file": "images/book/book4.jpg",
+    "url": "d.html"
+  },
+  "book_5": {
+    "file": "images/book/book5.jpg",
+    "url": "e.html"
+  },
+  "book_6": {
+    "file": "images/book/book6.jpg",
+    "url": "f.html"
+  },
+  "book_7": {
+    "file": "images/book/book7.jpg",
+    "url": "g.html"
+  },
+  "book_8": {
+    "file": "images/book/book8.jpg",
+    "url": "h.html"
+  }
+}

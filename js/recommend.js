@@ -4,9 +4,10 @@
 // 각각 필요로 한 항목이 무엇인가
 // - 이미지 경로
 // - URL
+
 const recommend_xh = new XMLHttpRequest();
 
-recommend_xh.open("GET", "recommend.json");
+recommend_xh.open("GET", "/data/recommend.json");
 recommend_xh.send();
 recommend_xh.onreadystatechange = function (event) {
   //console.log(event.target);
@@ -27,7 +28,6 @@ function makeRecommendSlideHtml(_data) {
   const RecommendRes = _data;
   // 출력을 시켜줄 문장을 만들자.
   let recommendHtml = "";
-
   // total만큼 반복하자.
   // for는 반복을 하는데 true인 경우에만 반복한다.
   for (let i = 1; i <= RecommendRes.total + 1; i++) {
@@ -36,7 +36,10 @@ function makeRecommendSlideHtml(_data) {
       temp = `
     <div class="swiper-slide">
         <div class="recommend-slide-item">
-            <h1>전체보기 -> </h1>
+          <div class="recommend-slide-total">
+            <img src="${RecommendRes.total_img.file}" alt="${RecommendRes.total_img.url}"/>
+            <div class="recommend-total-txt">전체보기</div>
+          </div>
         </div>
     </div>
     `;
@@ -81,10 +84,13 @@ function makeRecommendSlideHtml(_data) {
   const recommendSlide = document.querySelector(
     ".recommend-slide .swiper-wrapper"
   );
-  //   console.log(visualSlide);
+  const prevBt = document.querySelector(".recommend-slide-prev");
+  const NextBt = document.querySelector(".recommend-slide-next");
+  // console.log(prevBt);
+  // console.log(recommendSlide);
   recommendSlide.innerHTML = recommendHtml;
 
-  new Swiper(".recommend-slide", {
+  var mySwiper = new Swiper(".recommend-slide", {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 27,
@@ -92,8 +98,23 @@ function makeRecommendSlideHtml(_data) {
     speed: 500,
     // 좌측, 우측 이동 버튼
     navigation: {
-      nextEl: ".recommend-slide-next",
       prevEl: ".recommend-slide-prev",
+      nextEl: ".recommend-slide-next",
     },
+  });
+  mySwiper.on("slideChange", function () {
+    if (mySwiper.isBeginning) {
+      // 처음 슬라이드인 경우
+      prevBt.style.display = "none"; // 이전 버튼 숨김
+      NextBt.style.display = "block"; // 다음 버튼 표시
+    } else if (mySwiper.isEnd) {
+      // 마지막 슬라이드인 경우
+      prevBt.style.display = "block"; // 이전 버튼 표시
+      NextBt.style.display = "none"; // 다음 버튼 숨김
+    } else {
+      // 중간 슬라이드인 경우
+      prevBt.style.display = "block"; // 이전 버튼 표시
+      NextBt.style.display = "block"; // 다음 버튼 표시
+    }
   });
 }

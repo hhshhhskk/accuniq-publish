@@ -6,7 +6,7 @@
 // - URL
 const tour_xh = new XMLHttpRequest();
 
-tour_xh.open("GET", "tour.json");
+tour_xh.open("GET", "/data/tour.json");
 tour_xh.send();
 tour_xh.onreadystatechange = function (event) {
   //console.log(event.target);
