@@ -39,7 +39,20 @@ function makeTourSlideHtml(_data) {
       TourRes["tour_" + i].url
     }" />
             </a>
-            <div class="tour-slide-info" ></div>
+            <div class="tour-slide-info" >
+              <div class="tour-itemBadge">
+              ${TourRes["tour_" + i].babge}
+              </div>
+              <div class="tour-itemBenefit">
+              ${TourRes["tour_" + i].benefit}
+              </div>
+              <div class="tour-itemName">
+              ${TourRes["tour_" + i].name}
+              </div>
+              <div class="tour-itemPrice">
+              ${TourRes["tour_" + i].price}
+              </div>
+            </div>
         </div>
     </div>
     `;
@@ -50,9 +63,10 @@ function makeTourSlideHtml(_data) {
   // 어디다가 자료를 출력할 것인지 지정
   const tourSlide = document.querySelector(".tour-slide .swiper-wrapper");
   //   console.log(visualSlide);
+  const prevBt = document.querySelector(".tour-slide-prev");
+  const NextBt = document.querySelector(".tour-slide-next");
   tourSlide.innerHTML = tourHtml;
-
-  new Swiper(".tour-slide", {
+  let mySwiper = new Swiper(".tour-slide", {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 24,
@@ -63,5 +77,21 @@ function makeTourSlideHtml(_data) {
       nextEl: ".tour-slide-next",
       prevEl: ".tour-slide-prev",
     },
+  });
+
+  mySwiper.on("slideChange", function () {
+    if (mySwiper.isBeginning) {
+      // 처음 슬라이드인 경우
+      prevBt.style.display = "none"; // 이전 버튼 숨김
+      NextBt.style.display = "block"; // 다음 버튼 표시
+    } else if (mySwiper.isEnd) {
+      // 마지막 슬라이드인 경우
+      prevBt.style.display = "block"; // 이전 버튼 표시
+      NextBt.style.display = "none"; // 다음 버튼 숨김
+    } else {
+      // 중간 슬라이드인 경우
+      prevBt.style.display = "block"; // 이전 버튼 표시
+      NextBt.style.display = "block"; // 다음 버튼 표시
+    }
   });
 }

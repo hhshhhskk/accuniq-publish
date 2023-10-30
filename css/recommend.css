@@ -139,6 +139,8 @@
   position: relative;
   height: calc(100% - 310px);
   padding: 22px 20px;
+
+  background-color: rgba(0, 0, 0, 0);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }

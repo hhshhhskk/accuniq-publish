@@ -1,35 +1,67 @@
 {
-  "total": 8,
+  "total": 7,
+  "shortcuts_logo": {
+    "file": "images/live/live_logo2.svg",
+    "url": "a.html"
+  },
+  "shortcuts_bg": {
+    "file": "images/live/live-shortcuts.jpg",
+    "url": "a.html"
+  },
   "live_1": {
     "file": "images/live/live1.jpg",
+    "babge": "방송예정",
+    "name": "소담상회 x 에이브랩",
+    "day": "10월 31일 (화)",
+    "time": "16:00",
     "url": "a.html"
   },
   "live_2": {
     "file": "images/live/live2.jpg",
+    "babge": "방송예정",
+    "name": "[나트랑] 스완도르 올인클루시브 5일 70만원대~",
+    "day": "11월 01일 (수)",
+    "time": "18:00",
     "url": "b.html"
   },
   "live_3": {
     "file": "images/live/live3.jpg",
+    "babge": "방송예정",
+    "name": "인천으로 떠나는 나만의 휴식! 네스트호텔 라이브특가",
+    "day": "11월 02일 (목)",
+    "time": "18:00",
     "url": "c.html"
   },
   "live_4": {
     "file": "images/live/live4.png",
+    "babge": "방송예정",
+    "name": "제주 자연 속에서 즐기는 온전한 쉼 ✨ 파르나스 호텔 제주",
+    "day": "11월 23일 (목)",
+    "time": "19:00",
     "url": "d.html"
   },
   "live_5": {
     "file": "images/live/live5.jpg",
+    "babge": "VOD",
+    "name": "전라도 특집 여수/전주/광주",
+    "day": "",
+    "time": "",
     "url": "e.html"
   },
   "live_6": {
     "file": "images/live/live6.jpg",
-    "url": "f.html"
+    "babge": "VOD",
+    "name": "진에어 동계 잔여석 & 3월 출발 단독 특가! 방송중에만 제휴카...",
+    "day": "",
+    "time": "",
+    "url": "g.html"
   },
   "live_7": {
     "file": "images/live/live7.jpg",
-    "url": "g.html"
-  },
-  "live_8": {
-    "file": "images/live/live8.jpg",
+    "babge": "VOD",
+    "name": "용평리조트 최대 85% 라이브 특가! 7만원대~",
+    "day": "",
+    "time": "",
     "url": "h.html"
   }
 }

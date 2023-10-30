@@ -1,7 +1,6 @@
 .live {
   position: relative;
   padding-top: 30px;
-  background-color: violet;
 }
 
 .live-inner {
@@ -33,17 +32,55 @@
 
 .live-slide {
   position: relative;
+  height: 100%;
 }
 
 .live-slide-item {
   position: relative;
+  height: 100%;
 }
 
 .live-link {
-  position: relative;
   width: 100%;
   height: 100%;
-  display: block;
+}
+
+.live-link img {
+  width: 100%;
+  height: 100%;
+}
+
+.live-slide-shortcut {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* .live-slide-logo {} */
+
+.live-slide-logo img {
+  width: 130px;
+  height: 32px;
+}
+
+.live-total-txt {
+  margin-top: 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.live-total-bt {
+  height: 4.2rem;
+  margin-top: 1.4rem;
+  padding: 0 1.6rem;
+  border: 1px solid #fff;
+  font-size: 1.6rem;
+  line-height: 4.2rem;
+  color: #fff;
+  border-radius: 2.1rem;
 }
 
 .live-img {
@@ -53,8 +90,73 @@
 }
 
 .live-img img {
+  position: relative;
   width: 300px;
   height: 456px;
+  border-radius: 15px;
+}
+
+.live-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 18.65%,
+      transparent 39.78%
+    ),
+    linear-gradient(180deg, transparent 56.75%, rgba(0, 0, 0, 0.5) 87.59%);
+  border-radius: 15px;
+}
+
+.live-info-top {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.live-babge {
+  height: 3.2rem;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0 1.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  color: white;
+  text-align: center;
+  border-radius: 1.6rem;
+}
+
+.live-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.live-info-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 110px;
+  color: white;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.live-day {
+  margin-bottom: 0.4rem;
+  font-size: 2.8rem;
+  line-height: 3.35rem;
+}
+
+.live-time {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 6rem;
 }
 
 .live-slide-prev {
@@ -63,6 +165,7 @@
   left: 0;
   width: 50px;
   height: 50px;
+  display: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
   z-index: 2;
@@ -121,8 +224,9 @@
 .live-footer button {
   position: relative;
   padding: 0 3.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 1.6rem;
   line-height: 5.6rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3.8rem;
+  background-color: rgba(0, 0, 0, 0);
 }

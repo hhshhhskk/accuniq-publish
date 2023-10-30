@@ -1,31 +1,63 @@
 {
   "total": 7,
+  "total_img": {
+    "file": "images/total.svg",
+    "url": "a.html"
+  },
   "ticket_1": {
     "file": "images/ticket/t1.gif",
+    "title": "뮤지컬 <블랙메리포핀스>",
+    "place": "서경대학교 공연예술센터 스콘1관",
+    "duration": "2023.12.1 - 12.3",
+    "babge": "단독판매",
     "url": "a.html"
   },
   "ticket_2": {
     "file": "images/ticket/t2.gif",
+    "title": "태양의서커스 <루치아>",
+    "place": "잠실종합운동장 내 빅탑",
+    "duration": "2023.10.25 - 2023.12.31",
+    "babge": "좌석우위",
     "url": "b.html"
   },
   "ticket_3": {
     "file": "images/ticket/t3.gif",
+    "title": "뮤지컬 일 테노레 (IL TENORE)",
+    "place": "예술의전당 CJ 토월극장",
+    "duration": "2023.12.19 - 2024.02.25",
+    "babge": "좌석우위",
     "url": "c.html"
   },
   "ticket_4": {
     "file": "images/ticket/t4.gif",
+    "title": "뮤지컬 <렌트>",
+    "place": "coex 신한카드 artium",
+    "duration": "2023.11.11 - 2024.02.25",
+    "babge": "단독판매",
     "url": "d.html"
   },
   "ticket_5": {
     "file": "images/ticket/t5.gif",
+    "title": "뮤지컬 <레미제라블> - 부산",
+    "place": "부산 드림씨어터",
+    "duration": "2023.10.11 - 11.19",
+    "babge": "",
     "url": "e.html"
   },
   "ticket_6": {
     "file": "images/ticket/t6.gif",
+    "title": "태양의서커스 <루치아> - 부산",
+    "place": "신세계 센텀시티 내 빅탑",
+    "duration": "2024.1.13 - 2.4",
+    "babge": "좌석우위",
     "url": "f.html"
   },
   "ticket_7": {
     "file": "images/ticket/t7.gif",
+    "title": "뮤지컬 <컴프롬어웨이>",
+    "place": "광림아트센터 BBCH홀",
+    "duration": "2023.11.28 - 2024.2.18",
+    "babge": "좌석우위",
     "url": "g.html"
   }
 }

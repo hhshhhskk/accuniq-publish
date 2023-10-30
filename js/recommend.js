@@ -59,13 +59,13 @@ function makeRecommendSlideHtml(_data) {
                   <ul>
                     <li>
                       <span class="recommend-good-info-price">
-                        <b>24%</b>
-                        <em>7,500</em>원
+                        <b>${RecommendRes["recommend_" + i].discount}</b>
+                        <em>${RecommendRes["recommend_" + i].price}</em>
                       </span>
                     </li>
                     <li>
                       <p class="recommend-good-info-desc">
-                        이런 저런 상품입니다.이런 저런 상품입니다.이런 저런 상품입니다.이런 저런 상품입니다.이런 저런 상품입니다.이런 저런 상품입니다.이런 저런 상품입니다.이런 저런 상품입니다.이런 저런 상품입니다.
+                      ${RecommendRes["recommend_" + i].prodName}
                       </p>
                     </li>
                   </ul>

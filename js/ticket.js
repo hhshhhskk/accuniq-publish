@@ -34,11 +34,14 @@ function makeTicketSlideHtml(_data) {
     let temp = ``;
     if (i === TicketRes.total + 1) {
       temp = `
-    <div class="swiper-slide">
+      <div class="swiper-slide">
         <div class="ticket-slide-item">
-            <h1>전체보기 -> </h1>
+          <div class="ticket-slide-total">
+            <img src="${TicketRes.total_img.file}" alt="${TicketRes.total_img.url}"/>
+            <div class="ticket-total-txt">전체보기</div>
+          </div>
         </div>
-    </div>
+      </div>
     `;
     } else {
       temp = `
@@ -53,24 +56,24 @@ function makeTicketSlideHtml(_data) {
                 <div class="ticket-info" >
                   <ul>
                     <li>
-                      <span class="ticket-info-title">
-                        <b>뮤지컬, 공연</b>
-                      </span>
+                      <div class="ticket-info-title">
+                        <b>${TicketRes["ticket_" + i].title}</b>
+                      </div>
                     </li>
                     <li>
-                      <span class="ticket-info-location">
-                        그린아트컴퓨터학원 5층
-                      </span>
+                      <div class="ticket-info-place">
+                      ${TicketRes["ticket_" + i].place}
+                      </div>
                     </li>
                     <li>
-                      <span class="ticket-info-time">
-                       2023.10.25 ~ 2023.12.31
-                      </span>
+                      <div class="ticket-info-duration">
+                      ${TicketRes["ticket_" + i].duration}
+                      </div>
                     </li>
                     <li>
-                      <span class="ticket-info-tag">
-                        좌석우위
-                      </span>
+                      <div class="ticket-info-babge">
+                      ${TicketRes["ticket_" + i].babge}
+                      </div>
                     </li>
                     
                   </ul>
@@ -88,9 +91,12 @@ function makeTicketSlideHtml(_data) {
   // 어디다가 자료를 출력할 것인지 지정
   const ticketSlide = document.querySelector(".ticket-slide .swiper-wrapper");
   //   console.log(ticketHtml);
+  const prevBt = document.querySelector(".ticket-slide-prev");
+  const NextBt = document.querySelector(".ticket-slide-next");
+
   ticketSlide.innerHTML = ticketHtml;
 
-  new Swiper(".ticket-slide", {
+  let mySwiper = new Swiper(".ticket-slide", {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 28,
@@ -101,5 +107,21 @@ function makeTicketSlideHtml(_data) {
       nextEl: ".ticket-slide-next",
       prevEl: ".ticket-slide-prev",
     },
+  });
+
+  mySwiper.on("slideChange", function () {
+    if (mySwiper.isBeginning) {
+      // 처음 슬라이드인 경우
+      prevBt.style.display = "none"; // 이전 버튼 숨김
+      NextBt.style.display = "block"; // 다음 버튼 표시
+    } else if (mySwiper.isEnd) {
+      // 마지막 슬라이드인 경우
+      prevBt.style.display = "block"; // 이전 버튼 표시
+      NextBt.style.display = "none"; // 다음 버튼 숨김
+    } else {
+      // 중간 슬라이드인 경우
+      prevBt.style.display = "block"; // 이전 버튼 표시
+      NextBt.style.display = "block"; // 다음 버튼 표시
+    }
   });
 }
