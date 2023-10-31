@@ -22,7 +22,7 @@ ticket_xh.onreadystatechange = function (event) {
   }
 };
 
-// visual 슬라이드 내용 채우는 기능
+// 슬라이드 내용 채우는 기능
 function makeTicketSlideHtml(_data) {
   const TicketRes = _data;
   // 출력을 시켜줄 문장을 만들자.
@@ -52,6 +52,7 @@ function makeTicketSlideHtml(_data) {
                   <img src="${TicketRes["ticket_" + i].file}" alt="${
         TicketRes["ticket_" + i].url
       }"/>
+                  <div class="ticket-img-num">${i}</div>
                 </div>
                 <div class="ticket-info" >
                   <ul>

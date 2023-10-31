@@ -2,34 +2,50 @@
   "total": 8,
   "book_1": {
     "file": "images/book/book1.jpg",
+    "title": "기적의 자세요정",
+    "price": "19,800원",
     "url": "a.html"
   },
   "book_2": {
     "file": "images/book/book2.jpg",
+    "title": "물리박사 김상욱의 수상한 연구실 1",
+    "price": "15,120원",
     "url": "b.html"
   },
   "book_3": {
     "file": "images/book/book3.png",
+    "title": "야나두키즈 1년 통합이용권+영어전집(야나두키즈 잉글리쉬)",
+    "price": "160,550원",
     "url": "c.html"
   },
   "book_4": {
     "file": "images/book/book4.jpg",
+    "title": "생각이 너무 많은 어른을 위한 심리학",
+    "price": "16,020원",
     "url": "d.html"
   },
   "book_5": {
     "file": "images/book/book5.jpg",
+    "title": "죽어나간 시간을 위한 애도",
+    "price": "16,020원",
     "url": "e.html"
   },
   "book_6": {
     "file": "images/book/book6.jpg",
+    "title": "야나두키즈 12개월 통합이용권 (+30일 추가증정)",
+    "price": "103,550원",
     "url": "f.html"
   },
   "book_7": {
     "file": "images/book/book7.jpg",
+    "title": "세븐틴 헤븐 캐럿반 앨범 세븐틴스 11집 SEVENTEEN",
+    "price": "12,300원",
     "url": "g.html"
   },
   "book_8": {
     "file": "images/book/book8.jpg",
+    "title": "마시지 않을 수 없는 밤이니까요",
+    "price": "15,300원",
     "url": "h.html"
   }
 }

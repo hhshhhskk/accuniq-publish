@@ -22,7 +22,7 @@ event_xh.onreadystatechange = function (event) {
   }
 };
 
-// visual 슬라이드 내용 채우는 기능
+// 슬라이드 내용 채우는 기능
 function makeEventSlideHtml(_data) {
   const EventRes = _data;
   // 출력을 시켜줄 문장을 만들자.
