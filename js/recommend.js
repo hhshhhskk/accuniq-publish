@@ -7,13 +7,14 @@
 window.addEventListener("load", function () {
   const recommend_xh = new XMLHttpRequest();
 
-  recommend_xh.open("GET", "/data/recommend.json");
+  const jsonFileName = "/data/recommend.json";
+  recommend_xh.open("GET", jsonFileName);
   recommend_xh.send();
   recommend_xh.onreadystatechange = function (event) {
     //console.log(event.target);
 
     if (event.target.readyState === XMLHttpRequest.DONE) {
-      console.log("자료왔다");
+      // console.log("자료왔다");
       // console.log(event.target.response);
 
       const result = JSON.parse(event.target.response);
@@ -30,9 +31,50 @@ window.addEventListener("load", function () {
     let recommendHtml = "";
     // total만큼 반복하자.
     // for는 반복을 하는데 true인 경우에만 반복한다.
-    for (let i = 1; i <= RecommendRes.total + 1; i++) {
+    for (let i = 0; i < RecommendRes.total; i++) {
       let temp = ``;
-      if (i === RecommendRes.total + 1) {
+      let price = RecommendRes.recommend_slide[i].price
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      temp = `
+      <div class="swiper-slide">
+          <div class="recommend-slide-item">
+              <a class="recommend-link" href="${
+                RecommendRes.recommend_slide[i].url
+              }">
+                <div class="recommend-img" >
+                  <img src="${RecommendRes.recommend_slide[i].file}" alt="${
+        RecommendRes.recommend_slide[i].url
+      }"/>
+                </div>
+                <div class="recommend-info" >
+                  <ul>
+                    <li>
+                      <span class="recommend-good-info-price">
+                        <b>${
+                          RecommendRes.recommend_slide[i].discount === 0
+                            ? ""
+                            : RecommendRes.recommend_slide[i].discount + "%"
+                        }</b>
+                        <em>${price}원</em>
+                      </span>
+                    </li>
+                    <li>
+                      <p class="recommend-good-info-desc">
+                      ${RecommendRes.recommend_slide[i].prodName}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a> 
+          </div>
+      </div>
+      `;
+
+      // console.log(temp);
+      recommendHtml += temp;
+
+      if (i === RecommendRes.total - 1) {
         temp = `
     <div class="swiper-slide">
         <div class="recommend-slide-item">
@@ -43,41 +85,8 @@ window.addEventListener("load", function () {
         </div>
     </div>
     `;
-      } else {
-        temp = `
-      <div class="swiper-slide">
-          <div class="recommend-slide-item">
-              <a class="recommend-link" href="${
-                RecommendRes["recommend_" + i].url
-              }">
-                <div class="recommend-img" >
-                  <img src="${RecommendRes["recommend_" + i].file}" alt="${
-          RecommendRes["recommend_" + i].url
-        }"/>
-                </div>
-                <div class="recommend-info" >
-                  <ul>
-                    <li>
-                      <span class="recommend-good-info-price">
-                        <b>${RecommendRes["recommend_" + i].discount}</b>
-                        <em>${RecommendRes["recommend_" + i].price}</em>
-                      </span>
-                    </li>
-                    <li>
-                      <p class="recommend-good-info-desc">
-                      ${RecommendRes["recommend_" + i].prodName}
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </a> 
-          </div>
-      </div>
-      `;
+        recommendHtml += temp;
       }
-
-      // console.log(temp);
-      recommendHtml += temp;
     }
 
     // 어디다가 자료를 출력할 것인지 지정

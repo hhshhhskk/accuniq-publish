@@ -187,6 +187,7 @@
   color: #111;
   word-break: keep-all;
   text-overflow: ellipsis;
+  margin-top: 0.6rem;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
@@ -264,6 +265,7 @@
   font-size: 1.6rem;
   line-height: 5.6rem;
   border-radius: 3.8rem;
+  cursor: pointer;
 }
 .footer-bt-img {
   position: relative;

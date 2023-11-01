@@ -1,75 +1,77 @@
 {
   "total": 9,
-  "tour_1": {
-    "file": "images/tour/tour1.jpeg",
-    "babge": "올인클루시브",
-    "benefit": "얼리 체크인 or 레이트 체크아웃 포함",
-    "name": "[스완도르 깜란/올인클루시브] 나트랑 자유여행",
-    "price": "580,000원~",
-    "url": "a.html"
-  },
-  "tour_2": {
-    "file": "images/tour/tour2.jpeg",
-    "babge": "룸UP",
-    "benefit": "럭셔리 킹->럭셔리 레이크 킹 룸UP",
-    "name": "소피텔 앰배서더 서울 호텔&서비스드 레지던스",
-    "price": "346,500원",
-    "url": "b.html"
-  },
-  "tour_3": {
-    "file": "images/tour/tour3.jpeg",
-    "babge": "국적기직항",
-    "benefit": "라스베가스 준특급 2박, 5대특식 포함",
-    "name": "[미서부/단독/BEST] 3대도시+8대캐년 완전일주 10일/11일 [아시아나]",
-    "price": "3,399,000원~",
-    "url": "c.html"
-  },
-  "tour_4": {
-    "file": "images/tour/tour4.jpeg",
-    "babge": "히트상품",
-    "benefit": "사이판 최대 워터파크 웨이브정글 이용가능",
-    "name": "[사이판5일]사이판 월드리조트_골드카드",
-    "price": "1,069,000원~",
-    "url": "d.html"
-  },
-  "tour_5": {
-    "file": "images/tour/tour5.jpeg",
-    "babge": "강력특가",
-    "benefit": "클래식 킹",
-    "name": "레스케이프 호텔",
-    "price": "220,000원~",
-    "url": "e.html"
-  },
-  "tour_6": {
-    "file": "images/tour/tour6.jpeg",
-    "babge": "BEST",
-    "benefit": "토트넘VS울버햄튼 경기 티켓 포함",
-    "name": "[런던Pack] 찐 런던 & 토트넘 직관 경기_6박8일",
-    "price": "5,490,000원~",
-    "url": "f.html"
-  },
-  "tour_7": {
-    "file": "images/tour/tour7.jpeg",
-    "babge": "",
-    "benefit": "",
-    "name": "",
-    "price": "",
-    "url": "g.html"
-  },
-  "tour_8": {
-    "file": "images/tour/tour8.webp",
-    "babge": "",
-    "benefit": "",
-    "name": "",
-    "price": "",
-    "url": "h.html"
-  },
-  "tour_9": {
-    "file": "images/tour/tour9.jpeg",
-    "babge": "",
-    "benefit": "",
-    "name": "",
-    "price": "",
-    "url": "i.html"
-  }
+  "tour_slide": [
+    {
+      "file": "images/tour/tour1.jpeg",
+      "babge": "올인클루시브",
+      "benefit": "얼리 체크인 or 레이트 체크아웃 포함",
+      "name": "[스완도르 깜란/올인클루시브] 나트랑 자유여행",
+      "price": "580000",
+      "url": "a.html"
+    },
+    {
+      "file": "images/tour/tour2.jpeg",
+      "babge": "룸UP",
+      "benefit": "럭셔리 킹->럭셔리 레이크 킹 룸UP",
+      "name": "소피텔 앰배서더 서울 호텔&서비스드 레지던스",
+      "price": "346500",
+      "url": "b.html"
+    },
+    {
+      "file": "images/tour/tour3.jpeg",
+      "babge": "국적기직항",
+      "benefit": "라스베가스 준특급 2박, 5대특식 포함",
+      "name": "[미서부/단독/BEST] 3대도시+8대캐년 완전일주 10일/11일 [아시아나]",
+      "price": "3399000",
+      "url": "c.html"
+    },
+    {
+      "file": "images/tour/tour4.jpeg",
+      "babge": "히트상품",
+      "benefit": "사이판 최대 워터파크 웨이브정글 이용가능",
+      "name": "[사이판5일]사이판 월드리조트_골드카드",
+      "price": "1069000",
+      "url": "d.html"
+    },
+    {
+      "file": "images/tour/tour5.jpeg",
+      "babge": "강력특가",
+      "benefit": "클래식 킹",
+      "name": "레스케이프 호텔",
+      "price": "220000",
+      "url": "e.html"
+    },
+    {
+      "file": "images/tour/tour6.jpeg",
+      "babge": "BEST",
+      "benefit": "토트넘VS울버햄튼 경기 티켓 포함",
+      "name": "[런던Pack] 찐 런던 & 토트넘 직관 경기_6박8일",
+      "price": "5490000",
+      "url": "f.html"
+    },
+    {
+      "file": "images/tour/tour7.jpeg",
+      "babge": "",
+      "benefit": "",
+      "name": "",
+      "price": "",
+      "url": "g.html"
+    },
+    {
+      "file": "images/tour/tour8.webp",
+      "babge": "",
+      "benefit": "",
+      "name": "",
+      "price": "",
+      "url": "h.html"
+    },
+    {
+      "file": "images/tour/tour9.jpeg",
+      "babge": "",
+      "benefit": "",
+      "name": "",
+      "price": "",
+      "url": "i.html"
+    }
+  ]
 }

@@ -57,6 +57,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 /* .live-slide-logo {} */
@@ -229,4 +230,5 @@
   line-height: 5.6rem;
   border-radius: 3.8rem;
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
