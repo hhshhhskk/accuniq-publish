@@ -26,28 +26,60 @@ window.addEventListener("load", function () {
   // 슬라이드 내용 채우는 기능
   function makeLiveSlideHtml(_data) {
     const LiveRes = _data;
-    // 출력을 시켜줄 문장을 만들자.
+
     let liveHtml = "";
 
-    // total만큼 반복하자.
-    // for는 반복을 하는데 true인 경우에만 반복한다.
     for (let i = 0; i < LiveRes.total; i++) {
       let temp = ``;
       temp = `
       <div class="swiper-slide">
           <div class="live-slide-item">
-              <a class="live-link" href="${LiveRes.live_slide[i].live_info.url}">
+              <a class="live-link" href="${
+                LiveRes.live_slide[i].live_info.url
+              }">
                 <div class="live-img" >
-                  <img src="${LiveRes.live_slide[i].live_info.file}" alt="${LiveRes.live_slide[i].live_info.url}"/>
+                  <img src="${LiveRes.live_slide[i].live_info.file}" alt="${
+        LiveRes.live_slide[i].live_info.url
+      }"/>
                 </div>
                 <div class="live-slide-overlay">
                   <div class="live-info-top"> 
-                    <div class="live-babge">${LiveRes.live_slide[i].live_info.babge}</div>
-                    <div class="live-name">${LiveRes.live_slide[i].live_info.name}</div>
+                    <div class="live-babge">${
+                      LiveRes.live_slide[i].live_info.babge
+                    }</div>
+                    <div class="live-name">${
+                      LiveRes.live_slide[i].live_info.name
+                    }</div>
                   </div>  
                   <div class="live-info-mid">
-                    <div class="live-day">${LiveRes.live_slide[i].live_day.day}</div>
-                    <div class="live-time">${LiveRes.live_slide[i].live_day.time}</div>
+                    <div class="live-day">${
+                      LiveRes.live_slide[i].live_day.day
+                    }</div>
+                    <div class="live-time">${
+                      LiveRes.live_slide[i].live_day.time
+                    }</div>
+                  </div>
+                  <div class="live-info-bottom">
+                    <div class="live-bot-img" >
+                      <img src="${
+                        LiveRes.live_slide[i].live_bottom.bot_img
+                      }" alt="이미지 없음"  onerror="this.style.display='none'"/>
+                    </div>
+                    <div class="live-bot-text" >
+                      <div class="live-bot-title">${
+                        LiveRes.live_slide[i].live_bottom.bot_title
+                      }</div>
+                      <div class="live-bot-num">
+                        <div class="live-bot-discount">${
+                          LiveRes.live_slide[i].live_bottom.bot_discount &&
+                          LiveRes.live_slide[i].live_bottom.bot_discount + "%"
+                        }</div>
+                        <div class="live-bot-price">${
+                          LiveRes.live_slide[i].live_bottom.bot_price &&
+                          LiveRes.live_slide[i].live_bottom.bot_price + "원"
+                        }</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </a> 
@@ -84,8 +116,8 @@ window.addEventListener("load", function () {
     const liveSlide = document.querySelector(".live-slide .swiper-wrapper");
     //   console.log(liveHtml);
 
-    const prevBt = document.querySelector(".live-slide-prev");
-    const NextBt = document.querySelector(".live-slide-next");
+    const prevBt = document.querySelector(".slide-prev");
+    const NextBt = document.querySelector(".slide-next");
     liveSlide.innerHTML = liveHtml;
 
     let mySwiper = new Swiper(".live-slide", {
@@ -96,8 +128,8 @@ window.addEventListener("load", function () {
       speed: 500,
       // 좌측, 우측 이동 버튼
       navigation: {
-        nextEl: ".live-slide-next",
-        prevEl: ".live-slide-prev",
+        nextEl: ".slide-next",
+        prevEl: ".slide-prev",
       },
     });
 

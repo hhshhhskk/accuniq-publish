@@ -160,57 +160,54 @@
   line-height: 6rem;
 }
 
-.live-slide-prev {
+.live-info-bottom {
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  display: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.9);
-  cursor: pointer;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 50%;
+  bottom: 17px;
+  left: 17px;
+  width: 265px;
+  height: 64px;
+  display: flex;
 }
 
-.live-slide-prev::before {
-  content: "";
+.live-bot-img img {
   position: relative;
-  width: 10px;
-  height: 18px;
-  display: block;
-  margin: 0 auto;
-  background: url("/images/slider_arrow.svg") no-repeat center;
-  /* rotate 돌리기 , deg -> "각도" */
-  transform: rotateY(180deg);
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+  border-radius: 0.6rem;
 }
 
-.live-slide-next {
+.live-bot-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-bot-title {
   position: absolute;
-  top: 50%;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.9);
-  cursor: pointer;
-  transform: translateX(50%) translateY(-50%);
-  border-radius: 50%;
+  top: 0.7rem;
+  max-width: 184px;
+
+  overflow: hidden;
+  font-size: 1.5rem;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.live-slide-next::before {
-  content: "";
-  position: relative;
-  width: 10px;
-  height: 18px;
-  display: block;
-  margin: 0 auto;
-  background: url("/images/slider_arrow.svg") no-repeat center;
+.live-bot-num {
+  position: absolute;
+  bottom: 0.7rem;
+  display: flex;
+}
+
+.live-bot-discount {
+  font-size: 2rem;
+  color: #ef3e43;
+}
+
+.live-bot-price {
+  font-size: 2rem;
+  color: #fff;
 }
 
 .live-footer {
@@ -226,9 +223,9 @@
   position: relative;
   padding: 0 3.9rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
   font-size: 1.6rem;
   line-height: 5.6rem;
-  border-radius: 3.8rem;
-  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  border-radius: 3.8rem;
 }

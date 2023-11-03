@@ -1,29 +1,42 @@
-// 백엔드 Response 데이터
-// 전체 비주얼 슬라이드 숫자 : 6개
-
-// 각각 필요로 한 항목이 무엇인가
-// - 이미지 경로
-// - URL
 window.addEventListener("load", function () {
-  const recommend_xh = new XMLHttpRequest();
+  var mySwiper;
+  fetch("/data/recommend.json")
+    .then((response) => response.json())
+    .then((data) => makeRecommendSlideHtml(data))
+    .catch((error) => console.error("Error:", error));
 
-  const jsonFileName = "/data/recommend.json";
-  recommend_xh.open("GET", jsonFileName);
-  recommend_xh.send();
-  recommend_xh.onreadystatechange = function (event) {
-    //console.log(event.target);
+  const buttons = document.querySelectorAll(".recommend-cate-bt");
 
-    if (event.target.readyState === XMLHttpRequest.DONE) {
-      // console.log("자료왔다");
-      // console.log(event.target.response);
+  buttons.forEach((button) => {
+    // console.log(button);
+    button.addEventListener("click", async () => {
+      // 모든 버튼에서 'recommend-cate-bt-active' 클래스 제거
+      buttons.forEach((btn) =>
+        btn.classList.remove("recommend-cate-bt-active")
+      );
+      // 클릭한 버튼에 'recommend-cate-bt-active' 클래스 추가
+      button.classList.add("recommend-cate-bt-active");
+      mySwiper.slideTo(0, 0);
 
-      const result = JSON.parse(event.target.response);
-      // console.log(result);
-      // 현재 화면 출력에 활용을 하지는 않고 있어요.
-      makeRecommendSlideHtml(result);
-    }
-  };
+      const selectedButton = document
+        .querySelector(".recommend-cate-bt.recommend-cate-bt-active")
+        .textContent.replace(/\s+/g, "");
+      // console.log(selectedButton);
 
+      let fileName = "";
+
+      if (selectedButton === "쎈딜") {
+        fileName = "/data/recommend.json";
+      } else if (selectedButton === "베스트") {
+        fileName = "/data/recommend2.json";
+      }
+      // console.log(fileName);
+      await fetch(fileName)
+        .then((response) => response.json())
+        .then((data) => makeRecommendSlideHtml(data))
+        .catch((error) => console.error("Error:", error));
+    });
+  });
   // 슬라이드 내용 채우는 기능
   function makeRecommendSlideHtml(_data) {
     const RecommendRes = _data;
@@ -99,7 +112,7 @@ window.addEventListener("load", function () {
     // console.log(recommendSlide);
     recommendSlide.innerHTML = recommendHtml;
 
-    var mySwiper = new Swiper(".recommend-slide", {
+    mySwiper = new Swiper(".recommend-slide", {
       slidesPerView: 4,
       slidesPerGroup: 4,
       spaceBetween: 27,
@@ -111,6 +124,7 @@ window.addEventListener("load", function () {
         nextEl: ".recommend-slide-next",
       },
     });
+
     mySwiper.on("slideChange", function () {
       if (mySwiper.isBeginning) {
         // 처음 슬라이드인 경우

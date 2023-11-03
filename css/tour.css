@@ -130,15 +130,12 @@
 }
 
 .tour-itemBenefit {
-  display: -webkit-box;
   overflow: hidden;
   font-size: 1.3rem;
   font-weight: 700;
   color: #1769ff;
   word-break: break-all;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 
 .tour-itemName {

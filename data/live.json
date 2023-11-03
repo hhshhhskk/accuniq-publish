@@ -1,5 +1,5 @@
 {
-  "total": 8,
+  "total": 7,
   "shortcuts_logo": {
     "file": "images/live/live_logo2.svg",
     "url": "a.html"
@@ -11,18 +11,18 @@
   "live_slide": [
     {
       "live_info": {
-        "file": "images/live/live1.jpg",
+        "file": "images/live/live1.jpeg",
         "babge": "방송예정",
-        "name": "소담상회 x 에이브랩",
+        "name": "[에듀트립] 글로벌 캠프 첫방 기념 최초 할인! 채팅 참여만 해도 경품 추첨",
         "url": "a.html"
       },
       "live_day": {
-        "day": "10월 31일 (화)",
-        "time": "16:00"
+        "day": "11월 08일 (수)",
+        "time": "11:00"
       },
       "live_bottom": {
-        "bot_img": "",
-        "bot_title": "",
+        "bot_img": "images/live/live1_1.png",
+        "bot_title": "새로운 여행, 컨셉 트립 기획전",
         "bot_discount": "",
         "bot_price": "",
         "bot_url": ""
@@ -30,45 +30,7 @@
     },
     {
       "live_info": {
-        "file": "images/live/live2.jpg",
-        "babge": "방송예정",
-        "name": "[나트랑] 스완도르 올인클루시브 5일 70만원대~",
-        "url": "b.html"
-      },
-      "live_day": {
-        "day": "11월 01일 (수)",
-        "time": "18:00"
-      },
-      "live_bottom": {
-        "bot_img": "",
-        "bot_title": "",
-        "bot_discount": "",
-        "bot_price": "",
-        "bot_url": ""
-      }
-    },
-    {
-      "live_info": {
-        "file": "images/live/live3.jpg",
-        "babge": "방송예정",
-        "name": "인천으로 떠나는 나만의 휴식! 네스트호텔 라이브특가",
-        "url": "c.html"
-      },
-      "live_day": {
-        "day": "11월 02일 (목)",
-        "time": "18:00"
-      },
-      "live_bottom": {
-        "bot_img": "",
-        "bot_title": "",
-        "bot_discount": "",
-        "bot_price": "",
-        "bot_url": ""
-      }
-    },
-    {
-      "live_info": {
-        "file": "images/live/live4.png",
+        "file": "images/live/live2.png",
         "babge": "방송예정",
         "name": "제주 자연 속에서 즐기는 온전한 쉼 ✨ 파르나스 호텔 제주",
         "url": "d.html"
@@ -87,9 +49,47 @@
     },
     {
       "live_info": {
+        "file": "images/live/live3.jpg",
+        "babge": "VOD",
+        "name": "네스트호텔 최대 73% 라이브특가",
+        "url": "c.html"
+      },
+      "live_day": {
+        "day": "",
+        "time": ""
+      },
+      "live_bottom": {
+        "bot_img": "images/live/live3_1.jpeg",
+        "bot_title": "네스트호텔 라이브특가 구매하러 가기!",
+        "bot_discount": 73,
+        "bot_price": 125100,
+        "bot_url": ""
+      }
+    },
+    {
+      "live_info": {
+        "file": "images/live/live4.jpg",
+        "babge": "VOD",
+        "name": "[나트랑] 스완도르 올인클루시브 5일 70만원대~",
+        "url": "b.html"
+      },
+      "live_day": {
+        "day": "",
+        "time": ""
+      },
+      "live_bottom": {
+        "bot_img": "images/live/live4_1.png",
+        "bot_title": "[카쇼라X스완도르 리조트] 올인클루시브 나트랑 3박 5일",
+        "bot_discount": "",
+        "bot_price": 749000,
+        "bot_url": ""
+      }
+    },
+    {
+      "live_info": {
         "file": "images/live/live5.jpg",
         "babge": "VOD",
-        "name": "전라도 특집 여수/전주/광주",
+        "name": "소담상회 x 에이브랩",
         "url": "e.html"
       },
       "live_day": {
@@ -97,10 +97,10 @@
         "time": ""
       },
       "live_bottom": {
-        "bot_img": "",
-        "bot_title": "",
-        "bot_discount": "",
-        "bot_price": "",
+        "bot_img": "images/live/live5_1.png",
+        "bot_title": "[10.31 라이브쇼핑 특가오픈] 에이브랩 리포글루타치온콜라겐",
+        "bot_discount": 12,
+        "bot_price": 35000,
         "bot_url": ""
       }
     },
@@ -108,7 +108,7 @@
       "live_info": {
         "file": "images/live/live6.jpg",
         "babge": "VOD",
-        "name": "용평리조트 최대 85% 라이브 특가! 7만원대~",
+        "name": "전라도 특집 여수/전주/광주",
         "url": "g.html"
       },
       "live_day": {
@@ -116,10 +116,10 @@
         "time": ""
       },
       "live_bottom": {
-        "bot_img": "",
-        "bot_title": "",
-        "bot_discount": "",
-        "bot_price": "",
+        "bot_img": "images/live/live6_1.jpeg",
+        "bot_title": "히든베이 호텔",
+        "bot_discount": 81,
+        "bot_price": 84950,
         "bot_url": ""
       }
     },
@@ -127,7 +127,7 @@
       "live_info": {
         "file": "images/live/live7.jpg",
         "babge": "VOD",
-        "name": "진에어 동계 잔여석 & 3월 출발 단독 특가! 방송중에만 제휴카...",
+        "name": "진에어 동계 잔여석 & 3월 출발 단독 특가! 방송 중에만 제휴카드로 결제시 15% 추가 할인 🎁",
         "url": "h.html"
       },
       "live_day": {
@@ -135,29 +135,10 @@
         "time": ""
       },
       "live_bottom": {
-        "bot_img": "",
-        "bot_title": "",
+        "bot_img": "images/live/live7_1.jpg",
+        "bot_title": "[실시간 항공권] 인천 ↔ 오사카",
         "bot_discount": "",
-        "bot_price": "",
-        "bot_url": ""
-      }
-    },
-    {
-      "live_info": {
-        "file": "images/live/live8.jpg",
-        "babge": "VOD",
-        "name": "",
-        "url": "i.html"
-      },
-      "live_day": {
-        "day": "",
-        "time": ""
-      },
-      "live_bottom": {
-        "bot_img": "",
-        "bot_title": "",
-        "bot_discount": "",
-        "bot_price": "",
+        "bot_price": "217900",
         "bot_url": ""
       }
     }

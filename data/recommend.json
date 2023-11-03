@@ -82,5 +82,84 @@
       "price": 8280,
       "url": "k.html"
     }
+  ],
+  "recommend_slide_best": [
+    {
+      "file": "images/recommend/recommend1.jpeg",
+      "prodName": "[무료배송] GAP/네파키즈 유아 아동양말 특가전 6팩 건조기가능/KC인증",
+      "discount": 50,
+      "price": 6900,
+      "url": "a.html"
+    },
+    {
+      "file": "images/recommend/recommend1.jpeg",
+      "prodName": "두번째json 2번째 항목입니다.",
+      "discount": 50,
+      "price": 6900,
+      "url": "a.html"
+    },
+    {
+      "file": "images/recommend/recommend1.jpeg",
+      "prodName": "두번째json 3번째 항목입니다.",
+      "discount": 50,
+      "price": 6900,
+      "url": "a.html"
+    },
+    {
+      "file": "images/recommend/recommend1.jpeg",
+      "prodName": "두번째json 4번째 항목입니다.",
+      "discount": 50,
+      "price": 6900,
+      "url": "a.html"
+    },
+    {
+      "file": "images/recommend/recommend5.jpeg",
+      "prodName": "[스포츠파크] EXR 여성 보아 후리스 자켓 롱자켓 12종택1",
+      "discount": 66,
+      "price": 12900,
+      "url": "e.html"
+    },
+    {
+      "file": "images/recommend/recommend6.jpeg",
+      "prodName": "[만원의행복] 호두앤 토핑호두과자 오리지널 40알 외 앙버터/누텔라/블루베리 혼합 골라담기",
+      "discount": 0,
+      "price": 8730,
+      "url": "f.html"
+    },
+    {
+      "file": "images/recommend/recommend7.png",
+      "prodName": "[쎈딜] [I*POP] 아이팝 스파클링 워터 플레인 / 아이팝 탄산수 / 강탄산 / 진짜 먹는 샘물로 만든 탄산수",
+      "discount": 22,
+      "price": 6900,
+      "url": "g.html"
+    },
+    {
+      "file": "images/recommend/recommend8.jpeg",
+      "prodName": "[쎈딜][스포츠파크] 노스페이스 컴피 알파 플리스 집업 NJ4FP57 JKL ALL",
+      "discount": 26,
+      "price": 79000,
+      "url": "h.html"
+    },
+    {
+      "file": "images/recommend/recommend9.png",
+      "prodName": "[쎈딜] 야나두키즈 12개월 통합이용권+영어전집 (+30일 추가증정)",
+      "discount": 88,
+      "price": 160550,
+      "url": "i.html"
+    },
+    {
+      "file": "images/recommend/recommend10.jpeg",
+      "prodName": "[쎈딜] 23FW 호주 어그 UGG 슬리퍼 /남녀 겨울 슬리퍼 양털 슬리퍼",
+      "discount": 13,
+      "price": 40940,
+      "url": "j.html"
+    },
+    {
+      "file": "images/recommend/recommend11.jpeg",
+      "prodName": "농심 컵라면 낱개6개 미니6입세트 육개장 김치사발면 짜파게티범벅 신라면 오징어짬뽕 새우탕 튀김우동",
+      "discount": 14,
+      "price": 8280,
+      "url": "k.html"
+    }
   ]
 }
