@@ -1,8 +1,12 @@
 window.addEventListener("load", function () {
   var mySwiper;
+  let jsonData;
   fetch("/data/recommend.json")
     .then((response) => response.json())
-    .then((data) => makeRecommendSlideHtml(data))
+    .then((data) => {
+      jsonData = data;
+      makeRecommendSlideHtml(data.recommend_slide);
+    })
     .catch((error) => console.error("Error:", error));
 
   const buttons = document.querySelectorAll(".recommend-cate-bt");
@@ -21,43 +25,36 @@ window.addEventListener("load", function () {
       const selectedButton = document
         .querySelector(".recommend-cate-bt.recommend-cate-bt-active")
         .textContent.replace(/\s+/g, "");
-      // console.log(selectedButton);
-
-      let fileName = "";
+      console.log(selectedButton);
 
       if (selectedButton === "쎈딜") {
-        fileName = "/data/recommend.json";
+        makeRecommendSlideHtml(jsonData.recommend_slide);
       } else if (selectedButton === "베스트") {
-        fileName = "/data/recommend2.json";
+        makeRecommendSlideHtml(jsonData.recommend_slide_best);
+      } else {
+        makeRecommendSlideHtml(jsonData);
       }
-      // console.log(fileName);
-      await fetch(fileName)
-        .then((response) => response.json())
-        .then((data) => makeRecommendSlideHtml(data))
-        .catch((error) => console.error("Error:", error));
     });
   });
   // 슬라이드 내용 채우는 기능
   function makeRecommendSlideHtml(_data) {
     const RecommendRes = _data;
-    // 출력을 시켜줄 문장을 만들자.
+    // console.log(RecommendRes[0]);
+
     let recommendHtml = "";
-    // total만큼 반복하자.
-    // for는 반복을 하는데 true인 경우에만 반복한다.
-    for (let i = 0; i < RecommendRes.total; i++) {
+
+    for (let i = 0; i < jsonData.total; i++) {
       let temp = ``;
-      let price = RecommendRes.recommend_slide[i].price
+      let price = RecommendRes[i].price
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       temp = `
       <div class="swiper-slide">
           <div class="recommend-slide-item">
-              <a class="recommend-link" href="${
-                RecommendRes.recommend_slide[i].url
-              }">
+              <a class="recommend-link" href="${RecommendRes[i].url}">
                 <div class="recommend-img" >
-                  <img src="${RecommendRes.recommend_slide[i].file}" alt="${
-        RecommendRes.recommend_slide[i].url
+                  <img src="${RecommendRes[i].file}" alt="${
+        RecommendRes[i].url
       }"/>
                 </div>
                 <div class="recommend-info" >
@@ -65,16 +62,16 @@ window.addEventListener("load", function () {
                     <li>
                       <span class="recommend-good-info-price">
                         <b>${
-                          RecommendRes.recommend_slide[i].discount === 0
+                          RecommendRes[i].discount === 0
                             ? ""
-                            : RecommendRes.recommend_slide[i].discount + "%"
+                            : RecommendRes[i].discount + "%"
                         }</b>
                         <em>${price}원</em>
                       </span>
                     </li>
                     <li>
                       <p class="recommend-good-info-desc">
-                      ${RecommendRes.recommend_slide[i].prodName}
+                      ${RecommendRes[i].prodName}
                       </p>
                     </li>
                   </ul>
@@ -87,12 +84,12 @@ window.addEventListener("load", function () {
       // console.log(temp);
       recommendHtml += temp;
 
-      if (i === RecommendRes.total - 1) {
+      if (i === jsonData.total - 1) {
         temp = `
     <div class="swiper-slide">
         <div class="recommend-slide-item">
           <div class="recommend-slide-total">
-            <img src="${RecommendRes.total_img.file}" alt="${RecommendRes.total_img.url}"/>
+            <img src="${jsonData.total_img.file}" alt="${jsonData.total_img.url}"/>
             <div class="recommend-total-txt">전체보기</div>
           </div>
         </div>

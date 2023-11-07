@@ -1,27 +1,8 @@
-// 백엔드 Response 데이터
-// 전체 비주얼 슬라이드 숫자 : 6개
-
-// 각각 필요로 한 항목이 무엇인가
-// - 이미지 경로
-// - URL
 window.addEventListener("load", function () {
-  const live_xh = new XMLHttpRequest();
-
-  live_xh.open("GET", "/data/live.json");
-  live_xh.send();
-  live_xh.onreadystatechange = function (event) {
-    //console.log(event.target);
-
-    if (event.target.readyState === XMLHttpRequest.DONE) {
-      // console.log("자료왔다");
-      // console.log(event.target.response);
-
-      const result = JSON.parse(event.target.response);
-      // console.log(result);
-      // 현재 화면 출력에 활용을 하지는 않고 있어요.
-      makeLiveSlideHtml(result);
-    }
-  };
+  fetch("/data/live.json")
+    .then((response) => response.json())
+    .then((data) => makeLiveSlideHtml(data))
+    .catch((error) => console.error("Error:", error));
 
   // 슬라이드 내용 채우는 기능
   function makeLiveSlideHtml(_data) {

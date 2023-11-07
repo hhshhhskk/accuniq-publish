@@ -73,9 +73,16 @@ window.addEventListener("load", function () {
                       </div>
                     </li>
                     <li>
-                      <div class="ticket-info-babge">
-                      ${TicketRes["ticket_" + i].babge}
-                      </div>
+                      ${
+                        TicketRes["ticket_" + i].babge === "좌석우위"
+                          ? `<div class="ticket-info-babge1">
+                            ${TicketRes["ticket_" + i].babge}
+                          </div>
+                        `
+                          : `<div class="ticket-info-babge2">
+                            ${TicketRes["ticket_" + i].babge}
+                          </div>`
+                      }
                     </li>
                     
                   </ul>

@@ -178,7 +178,7 @@
   color: #999;
 }
 
-.ticket-info-babge {
+.ticket-info-babge1 {
   position: relative;
   height: 2.4rem;
   display: inline-block;
@@ -188,6 +188,19 @@
   font-size: 1.1rem;
   line-height: 2.4rem;
   color: #4a95ff;
+  border-radius: 0.3rem;
+}
+
+.ticket-info-babge2 {
+  position: relative;
+  height: 2.4rem;
+  display: inline-block;
+  margin-top: 4px;
+  padding: 0 0.8rem;
+  border: 1px solid #ef3e43;
+  font-size: 1.1rem;
+  line-height: 2.4rem;
+  color: #ef3e43;
   border-radius: 0.3rem;
 }
 
